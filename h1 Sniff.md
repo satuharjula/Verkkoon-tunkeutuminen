@@ -2,13 +2,26 @@
 
 ## Tiivistelmä
 
-### Wireshark getting started
+### Wireshark - Aloittaminen
 
-### Network Interface Names on Linux
+-Wireshark on verkon kaappaamiseen sekä analysointiin käytettävä työkalu.
+-Kaappaus aloitetaan valitsemalla haluttu verkkoliitäntä ja painamalla Start.
+-Tilastoista näkee yleiskuvan liikenteestä. Esimerkiksi protokollat ja laitteet.
+-Suodattimilla voi rajata liikennettä. Esimerkiksi dns, http ja tls. (Karvinen 28.3.2025)
+
+### Verkkoliitäntöjen nimet Linuxissa
+
+- Verkkoliitännät nimetään Linuxissa systemd:n mukaan. Esimerkiksi enp1s0 ja wlp4s0.
+- Tyypit:
+  en = langallinen ethernet
+  lo = loopback (localhost)
+  wl = langaton (WiFi)
+-Verkkoliitännän voi tarkistaa komennolla ip a. (Karvinen 28.3.2025)
+
 
 ## Kali Linuxin asennus
 
-Aloitin tehtävän asentamalla Kali Linuxin VirtualBox:iin.
+Aloitin tehtävän asentamalla Kali Linuxin VirtualBox:iin. Wireshark oli valmiina Kali:ssa, joten sitä ei tarvinut erikseen asentaa tehtävää varten.
 
 ## Internet-yhteyden katkaisu ja palautus 
 
@@ -47,6 +60,57 @@ Koneeni lähdeportti 54072 ja palvelimen kohdeportti 443 HTTPS.
 
 
 <img width="470" height="79" alt="image" src="https://github.com/user-attachments/assets/c8a86ebb-3405-4d97-b39b-a596b15e5d40" />
+
+## Kaappauksen kuvailu
+
+- Paketteja 283.
+- Kaappauksen kesto 28.3.2025 klo 11:28:09-11:28:16, eli noin 7 sekunin ajan.
+- Laitteita kaksi kappaletta osoitteilla 192.168.122.7 ja 192.168.122.1.
+- Protokollat: DNS, TCP, QUIC ja ARP.
+
+## Verkkokortin merkki
+
+Syötin MAC-osoitteen MAC Address Lookup:iin, mutta en saanut varmaa tulosta. Lähde-MAC-osoite 52:54:00:2f:e1:e5 ensimmäiset kolme tavua viittaa locally administered -osoitteeseen, eli osoite ei todennäköisesti ole valmistajan antama. (MAC Address Lookup)
+  
+<img width="646" height="35" alt="image" src="https://github.com/user-attachments/assets/8654976f-f4d3-4acc-8b03-b090bb898c6c" />
+
+
+## Käyttäjän käyttämät web-palvelimet
+
+SNI, eli Server Name Indication kertoo, että käyttäjä on mennyt osoitteeseen terokarvinen.com. Vaikka liikenne on salattua SNI näyttää palvelimen nimen. (Cloudflare 2026)
+
+<img width="644" height="14" alt="image" src="https://github.com/user-attachments/assets/3dc1775c-565b-45da-a909-b7bc1c0051d1"/>
+
+
+## Oman liikenteen kaappaaminen
+
+Kaappasin pienen määrän omaa liikennettäni, kun koneeni yhdisti HTTPS-yhteyden Googlen palvelimeen. 
+
+### TCP 3-Way Handshake 
+
+SYN: Koneeni 10.0.2.15 lähdeportista 43008 lähettää palvelimelle 142.251.152.119 kohdeporttiin 443 paketin käyttäen TCP-protokollaa.
+SYN, ACK: Palvelin vastaa paketilla portista 443 porttiin 43008, eli hyväksyy yhteyspyynnön.
+ACK: Koneeni lähettää takaisin portista 43008 porttiin 443, jonka jälkeen TCP-yhteys on muodostettu.
+
+<img width="627" height="35" alt="image" src="https://github.com/user-attachments/assets/4d74f740-93f0-4dcb-9808-0151dce82909" />
+
+
+
+
+
+
+
+
+
+
+
+
+## Lähteet
+
+Cloudflare 2026. What is SNI (Server Name Indication)? Luettavissa: https://www.cloudflare.com/learning/ssl/what-is-sni/. Luettu: 28.3.2026.
+MAC Address Lookup. Luettavissa: https://maclookup.app/search/result?mac=5254.00. Luettu: 28.3.2026.
+Karvinen, T. 28.3.2025. Verkkoliitäntöjen nimet Linuxissa. Luettavissa: https://terokarvinen.com/network-interface-linux/. Luettu: 28.3.2026.
+Karvinen, T. 28.3.2025. Wireshark - Aloittaminen. Luettavissa: https://terokarvinen.com/wireshark-getting-started/. Luettu: 28.3.2026.
 
 
 
