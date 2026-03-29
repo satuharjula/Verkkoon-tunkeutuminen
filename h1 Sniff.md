@@ -38,26 +38,27 @@ Yhteys pois päältä
 Neljä kerrosta yhdestä sieppaamastani paketista:
 
 ### Linkkikerros (Link Layer)
-Ethernet II
-Source MAC (lähettäjä) ja Destination MAC (vastaanottaja)
+
+Ethernet II sisältää Source MAC (lähettäjä) ja Destination MAC (vastaanottaja), joiden avulla paketti siirtyy lähettäjältä vastaanottajalle.
 
 <img width="645" height="59" alt="image" src="https://github.com/user-attachments/assets/8aabaa3c-811d-4b0f-9d47-734bbc94ffa4" />
 
 ### Internet-kerros
 
-Source IP (lähettäjä) 10.0.2.15 ja Destination IP (vastaanottaja) 142.251.150.119.
+IPv4 sisältää IP-osoitteet Source IP (lähettäjä) 10.0.2.15 ja Destination IP (vastaanottaja) 142.251.150.119, joiden avulla paketti reititetään oikeaan kohteeseen.
 
 <img width="527" height="207" alt="image" src="https://github.com/user-attachments/assets/abb8b5c1-3f11-4ba7-874f-b0ee3f661dbd" />
 
 ### Kuljetuskerros (Transport Layer)
 
+TCP:n tehtävä muodostaa yhteys ja luotettava tiedonsiirto porttien avulla.
 Koneeni lähdeportti 54072 ja palvelimen kohdeportti 443 HTTPS.
 
 <img width="640" height="241" alt="image" src="https://github.com/user-attachments/assets/8acdcae8-3de7-44da-8239-278546e151b7" />
 
 ### Sovelluskerros (Application Layer)
 
-
+TLS:n tehtävä suojata yhteys salauksella.
 
 <img width="470" height="79" alt="image" src="https://github.com/user-attachments/assets/c8a86ebb-3405-4d97-b39b-a596b15e5d40" />
 
