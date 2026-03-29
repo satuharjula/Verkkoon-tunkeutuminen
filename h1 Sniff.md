@@ -68,6 +68,7 @@ TLS:n tehtävä suojata yhteys salauksella.
 <img width="470" height="79" alt="image" src="https://github.com/user-attachments/assets/c8a86ebb-3405-4d97-b39b-a596b15e5d40" />
 
 ## Kaappauksen kuvailu
+Avaa surfing-secure.pcap. Tutustu siihen pintapuolisesti ja kuvaile, millainen kaappaus on kyseessä.
 
 - Paketteja 283.
 - Kaappauksen kesto 28.3.2025 klo 11:28:09-11:28:16, eli noin 7 sekunin ajan.
