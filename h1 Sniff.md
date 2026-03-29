@@ -48,7 +48,7 @@ Ethernet II sisältää Source MAC (lähettäjä) ja Destination MAC (vastaanott
 
 <img width="645" height="59" alt="image" src="https://github.com/user-attachments/assets/8aabaa3c-811d-4b0f-9d47-734bbc94ffa4" />
 
-### Internet-kerros
+### Internet-kerros (Internet Layer)
 
 IPv4 sisältää IP-osoitteet Source IP (lähettäjä) 10.0.2.15 ja Destination IP (vastaanottaja) 142.251.150.119, joiden avulla paketti reititetään oikeaan kohteeseen.
 
