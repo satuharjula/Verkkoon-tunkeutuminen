@@ -5,17 +5,22 @@
 ### Wireshark - Aloittaminen
 
 -Wireshark on verkon kaappaamiseen sekä analysointiin käytettävä työkalu.
+
 -Kaappaus aloitetaan valitsemalla haluttu verkkoliitäntä ja painamalla Start.
+
 -Tilastoista näkee yleiskuvan liikenteestä. Esimerkiksi protokollat ja laitteet.
+
 -Suodattimilla voi rajata liikennettä. Esimerkiksi dns, http ja tls. (Karvinen 28.3.2025)
 
 ### Verkkoliitäntöjen nimet Linuxissa
 
 - Verkkoliitännät nimetään Linuxissa systemd:n mukaan. Esimerkiksi enp1s0 ja wlp4s0.
+- 
 - Tyypit:
   en = langallinen ethernet
   lo = loopback (localhost)
   wl = langaton (WiFi)
+  
 -Verkkoliitännän voi tarkistaa komennolla ip a. (Karvinen 28.3.2025)
 
 
