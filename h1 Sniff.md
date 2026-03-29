@@ -14,14 +14,14 @@
 
 ### Verkkoliitäntöjen nimet Linuxissa
 
-- Verkkoliitännät nimetään Linuxissa systemd:n mukaan. Esimerkiksi enp1s0 ja wlp4s0.
+Verkkoliitännät nimetään Linuxissa systemd:n mukaan. Esimerkiksi enp1s0 ja wlp4s0.
 
-- Tyypit:
+  Tyypit:
   en = langallinen ethernet
   lo = loopback (localhost)
   wl = langaton (WiFi)
   
--Verkkoliitännän voi tarkistaa komennolla ip a. (Karvinen 28.3.2025)
+Verkkoliitännän voi tarkistaa komennolla ip a. (Karvinen 28.3.2025)
 
 
 ## Kali Linuxin asennus
