@@ -15,7 +15,7 @@
 ### Verkkoliitäntöjen nimet Linuxissa
 
 - Verkkoliitännät nimetään Linuxissa systemd:n mukaan. Esimerkiksi enp1s0 ja wlp4s0.
-- 
+
 - Tyypit:
   en = langallinen ethernet
   lo = loopback (localhost)
