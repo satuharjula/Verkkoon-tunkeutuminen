@@ -24,7 +24,7 @@ Siirryin salaamattomalla HTTP-yhteydellä osoitteeseen http://localhost, jonka j
 
 ::1 On IPv6 loopback-osoite, joka vastaa IPv4-osoitetta 127.0.0.1. (Dhandala 20.3.2026) Eli pyyntö tulee koneeltani.
 
-- - Ensimmäinen tarkoittaa identd-tunnusta, eli kuka käyttäjä teki yhteyden. Toinen tarkoittaa kirjautunutta käyttäjää sivulle, joka ei ole saatavilla. (Apache 2026)
+--Ensimmäinen tarkoittaa identd-tunnusta, eli kuka käyttäjä teki yhteyden. Toinen tarkoittaa kirjautunutta käyttäjää sivulle, joka ei ole saatavilla. (Apache 2026)
 
 [11/Apr/2026:14:42:59 -0400] On aikaleima, jolloin pyyntö tehtiin.
 
