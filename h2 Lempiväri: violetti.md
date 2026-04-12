@@ -90,16 +90,23 @@ Ajoin komennon sudo ngrep -d lo -i nmap ja toisessa terminaalissa komennon sudo 
 
 <img width="807" height="649" alt="image" src="https://github.com/user-attachments/assets/953f4b2f-aa09-434b-ab4c-e1ff4f1aeb19" />
 
-## Agentti
+## Agentti & Pienemmät jäljet
 
-Vaihdoin nmap:n user-agent:n komenolla --script-args http.useragent="Mozilla/5.0" 127.0.0.1
+Vaihdoin nmap:n user-agent:n komenolla sudo nmap -A -p 80 --script-args http.useragent="Mozilla/5.0" 127.0.0.1
 
-Tarkistin, että se vaihtui komennolla sudo tail -n 10 /var/log/apache2/access.log
+Tarkistin, että se vaihtui komennolla sudo tail -n 10 /var/log/apache2/access.log. Tekstijonoa "nmap" ei enää löydy.
 
 <img width="784" height="166" alt="image" src="https://github.com/user-attachments/assets/106539d7-07ee-4b89-93c8-0bb3f6680f41" />
 
+Myös siepatussa verkkoliikentessä näkyi user-agentin muuttuneen.
 
-## Pienemmät jäljet
+<img width="658" height="53" alt="image" src="https://github.com/user-attachments/assets/8e8c423e-0960-4c1d-a86b-573b5ad1c6ca" />
+
+
+## LoWeR ChEcK
+
+
+
 
 
 
