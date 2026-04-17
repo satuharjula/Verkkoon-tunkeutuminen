@@ -15,4 +15,24 @@ Mahdollinen riski on pankkikortti, koska siinä on lähimaksu ominaisuus pienill
 
 ##  APDU komentojen rakenne
 
-APDU (Application Protocol Data Unit) on 
+APDU (Application Protocol Data Unit) on NFC-laitteiden ja älykorttien käyttämä viestimuoto. APDU-komento koostuu header (otsikko) ja data (valinnainen) osista.
+
+### Header:
+
+- CLA:	Class byte määrittää komennon tyypin
+- INS:	Instruction, eli komento (esim. SELECT)
+- P1:	Parametri 1
+- P2: Parametri 2
+
+### Data:
+
+- Lc:	Lähetettävän datan pituus
+- Data
+- Le:	Vastauksen pituus
+
+Tämän kappaleen sisällön ideoinnissa on hyödynnetty ChatGPT 5.3 -kielimallia. Syötteenä käytin: ”APDU komentojen rakenne”.
+
+## RFID hakkerointi uutinen
+
+
+
