@@ -34,5 +34,9 @@ Tämän kappaleen sisällön ideoinnissa on hyödynnetty ChatGPT 5.3 -kielimalli
 
 ## RFID hakkerointi uutinen
 
+https://www.is.fi/digitoday/art-2000001821216.html. 
 
+Uutisessa kerrottiin, kuinka itävaltalainen hakkeri Adrian Dabrowski testasi oman kerrostalonsa sähköistä lukkojärjestelmää. Hän hankki RFID-lukijan ja rakensi laitteen, jolla pystyi kopioimaan sekä lukemaan avainkorttien tietoja. Hän lähetti lukijan postissa, jolloin se sai skannattua matkalla muidenkin ihmisten RFID-kortteja, esimerkiksi postinkantajan yleisavaimen.
+Kerättyjen tietojen avulla hän pystyi luomaan korttisimulaattorin, joka toimii oikean avainkortin tavoin. Laitteen avulla hän sai avattua oman talonsa 43% ovista. Sekä tietyllä lukkojärjestelmällä olevista ovista jopa 93%.
+Hyökkäyksen kokonaiskustannus Dabrowskille oli alle 15 euroa, mikä osoittaa, kuinka helposti ja halvalla RFID-pohjaisia lukkojärjestelmiä voidaan murtaa.
 
