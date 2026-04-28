@@ -1,6 +1,7 @@
 ## 
 
 
+### 01. What is the channel that the wifi-global Access Point (AP) is currently using?
 
 sudo su
 
