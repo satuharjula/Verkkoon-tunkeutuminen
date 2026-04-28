@@ -37,7 +37,9 @@ STATION-osiossa näkyy rivi 78:C1:A7:BF:72:46, jonka Probes-sarakkeessa näkyy v
 Komennolla:
 
 cat ~/rockyou-top100000.txt | awk '{print "wifi-" $1}' > ~/wifi-rockyou.txt
+
 iwconfig wlan0mon channel 11
+
 mdk4 wlan0mon p -t F0:9F:C2:6A:88:26 -f ~/wifi-rockyou.txt
 
 <img width="871" height="233" alt="image" src="https://github.com/user-attachments/assets/b33503e3-5de4-4b44-9e93-f775219cf777" />
