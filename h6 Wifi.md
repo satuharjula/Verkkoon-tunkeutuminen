@@ -11,11 +11,9 @@ cat /root/flag.txt
 
 Loin Wifi-kansion komennolla mkdir ~/wifi
 
-Skannasin kaikki kanavat löytääkseni "wifi-global" -verkon ja sen kanavan:
-
-sudo airmon-ng start wlan0
-
-sudo airodump-ng wlan0mon -w ~/wifi/scan --manufacturer --wps --band abg
+Skannasin kaikki kanavat löytääkseni "wifi-global" -verkon ja sen kanavan:  
+sudo airmon-ng start wlan0  
+sudo airodump-ng wlan0mon -w ~/wifi/scan --manufacturer --wps --band abg  
 
 <img width="1098" height="250" alt="image" src="https://github.com/user-attachments/assets/40128e6f-0363-4f1a-b345-034bce312bc7" />
 
