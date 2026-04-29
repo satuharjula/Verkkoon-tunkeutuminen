@@ -37,29 +37,44 @@ STATION-osiossa näkyi wifi-IT:hen yhdistynyt asiakas, jonka MAC-osoite oli 10:F
 
 ### 03. What is the probe of 78:C1:A7:BF:72:46 that follows the format of the other networks in the range (wifi-)?
 
-Komennolla sudo airodump-ng wlan0mon -w scan --manufacturer --wps --band abg
+Yritin ensin skannata komennolla: sudo airodump-ng wlan0mon -w scan --manufacturer --wps --band abg , mutta 78:C1:A7:BF:72:46 ei ilmestynyt.  
+Tämän jälkeen komennolla grep "78:C1:A7:BF:72:46" scan-01.csv , jolloin tuloksessa näkyi että laite etsi verkkoa wifi-offices.
 
-<img width="866" height="248" alt="image" src="https://github.com/user-attachments/assets/7d5e6ae5-6ae1-4f05-8f2c-6d6c038833a3" />
-
-STATION-osiossa näkyy rivi 78:C1:A7:BF:72:46, jonka Probes-sarakkeessa näkyy verkkonimi " sudo airodump-ng wlan0mon -w ~/wifi/scanc44 --manufacturer --wps -c44
-".
+<img width="1016" height="63" alt="image" src="https://github.com/user-attachments/assets/53614cda-20da-4e03-8e30-3f77a766d42d" />  
 
 
 ### 04. What is the ESSID of the hidden AP (mac F0:9F:C2:6A:88:26)?
 
-Komennolla:
+Komennoilla:
 
-cat ~/rockyou-top100000.txt | awk '{print "wifi-" $1}' > ~/wifi-rockyou.txt
-
-iwconfig wlan0mon channel 11
-
-mdk4 wlan0mon p -t F0:9F:C2:6A:88:26 -f ~/wifi-rockyou.txt
+cat ~/rockyou-top100000.txt | awk '{print "wifi-" $1}' > ~/wifi-rockyou.txt  
+iwconfig wlan0mon channel 11  
+mdk4 wlan0mon p -t F0:9F:C2:6A:88:26 -f ~/wifi-rockyou.txt  
 
 <img width="871" height="233" alt="image" src="https://github.com/user-attachments/assets/b33503e3-5de4-4b44-9e93-f775219cf777" />
 
 Piilotetun AP:n ESSID on: wifi-free
 
 ### 05. What is the flag in the hidden AP router behind default credentials?
+
+Komennolla nano ~/wifi/free.conf loin free.conf -tiedoston.  
+
+<img width="189" height="134" alt="image" src="https://github.com/user-attachments/assets/6553d87c-e1be-4ca6-83cf-1e5191c6f4c3" />
+
+Yhdistin verkkoon komennolla wpa_supplicant -Dnl80211 -iwlan2 -c ~/wifi/free.conf  
+
+Avasin toisen terminaalin, jossa ajoin root:ina:  
+sudo su  
+dhclient wlan2 -v  
+
+Avasin selaimessa 192.168.16.1 ja kirjauduin sisälle käyttäjänä admin ja salasanalla admin, jolloin löysin lipun.
+
+<img width="694" height="308" alt="image" src="https://github.com/user-attachments/assets/bcd4158a-d644-4a19-8ad7-fd87997414d9" />
+
+
+
+
+
 
 
 
