@@ -73,7 +73,7 @@ Harjoituksessa opin Wi-Fi-verkkojen skannausta ja analysointia. Yllättävintä 
 ### Miten suhtautumiseni WLAN:in turvallisuuteen muuttui?
 
 Olen tiedostanut oletussalasanojen olevan tietoturvariski, mutta nyt sen näkeminen konkreettisesti käytännössä teki siitä paljon todellisemman.  
-Harjoitus myös osoitti, että WPA3-salaus ja SAE-autentikointi ovat huomattavasti turvallisempia kuin vanhemmat protokollat.  
+Harjoitus myös osoitti, että WPA3-salaus ja SAE-autentikointi ovat huomattavasti turvallisempia kuin vanhemmat protokollat.
 
 ### Lähteet: 
 
