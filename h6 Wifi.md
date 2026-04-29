@@ -1,18 +1,17 @@
 # h6 - Wifi
 
 
-## wifi challenge lab 2.1 haasteet 1-5
+## Wifi challenge lab 2.1 haasteet 1-5
 
 ### 01. What is the channel that the wifi-global Access Point (AP) is currently using?
 
-sudo su
-
-cat /root/flag.txt
+sudo su  
+cat /root/flag.txt  
 
 <img width="601" height="201" alt="Näyttökuva 2026-04-27 233459" src="https://github.com/user-attachments/assets/c93cd2a7-86b6-4ebf-aad8-543412596591" />
 
 
-Loin Wifi-kansion komennolla mkdir ~/wifi
+Loin Wifi-kansion komennolla mkdir ~/wifi  
 
 Skannasin kaikki kanavat löytääkseni "wifi-global" -verkon ja sen kanavan:  
 sudo airmon-ng start wlan0  
@@ -24,18 +23,15 @@ Wifi-global:in käyttämä kanava 44 löytyy sarakkeesta CH.
 
 ### 02. What is the MAC of the wifi-IT client?
 
-Etsin ensin wifi-IT-verkon skannaamalla kaikki verkot komennolla:
+Etsin ensin wifi-IT-verkon skannaamalla kaikki verkot komennolla:  
+sudo airodump-ng wlan0mon -w ~/wifi/scan --manufacturer --wps --band abg  
 
-sudo airodump-ng wlan0mon -w ~/wifi/scan --manufacturer --wps --band abg
+Wifi-IT (BSSID: F0:9F:C2:1A:CA:25) oli kanavalla 11. Seuraavaksi skannasin pelkästään kanavaa 11 kohdistamalla skannauksen wifi-IT:n BSSID:lle:  
+sudo airodump-ng wlan0mon -c 11 --bssid F0:9F:C2:1A:CA:25  
 
-Wifi-IT (BSSID: F0:9F:C2:1A:CA:25) oli kanavalla 11. Seuraavaksi skannasin pelkästään kanavaa 11 kohdistamalla skannauksen wifi-IT:n BSSID:lle:
-
-sudo airodump-ng wlan0mon -c 11 --bssid F0:9F:C2:1A:CA:25
-
-STATION-osiossa näkyi wifi-IT:hen yhdistynyt asiakas, jonka MAC-osoite oli 10:F9:6F:AC:53:52.
+STATION-osiossa näkyi wifi-IT:hen yhdistynyt asiakas, jonka MAC-osoite oli 10:F9:6F:AC:53:52.  
 
 <img width="851" height="282" alt="Näyttökuva 2026-04-28 194438" src="https://github.com/user-attachments/assets/0ca351e7-c9a2-4cc9-9775-aae13eb558c3" />
-
 
 ### 03. What is the probe of 78:C1:A7:BF:72:46 that follows the format of the other networks in the range (wifi-)?
 
@@ -43,7 +39,6 @@ Yritin ensin skannata komennolla: sudo airodump-ng wlan0mon -w scan --manufactur
 Tämän jälkeen komennolla grep "78:C1:A7:BF:72:46" scan-01.csv , jolloin tuloksessa näkyi että laite etsi verkkoa wifi-offices.
 
 <img width="1016" height="63" alt="image" src="https://github.com/user-attachments/assets/53614cda-20da-4e03-8e30-3f77a766d42d" />  
-
 
 ### 04. What is the ESSID of the hidden AP (mac F0:9F:C2:6A:88:26)?
 
