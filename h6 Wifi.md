@@ -71,7 +71,16 @@ Avasin selaimessa 192.168.16.1 ja kirjauduin sisälle käyttäjänä admin ja sa
 
 <img width="694" height="308" alt="image" src="https://github.com/user-attachments/assets/bcd4158a-d644-4a19-8ad7-fd87997414d9" />
 
+### Mitä opin?
 
+Harjoituksessa opin Wi-Fi-verkkojen skannausta ja analysointia. Yllättävintä oli, kuinka helposti verkkojen tietoja voidaan kerätä. Ainoastaan airodump-ng-komennolla näkee kaikki lähialueen verkot, niiden kanavat ja yhdistyneet laitteet.  
+
+### Miten suhtautumiseni WLAN:in turvallisuuteen muuttui?
+
+Olen tiedostanut oletussalasanojen olevan tietoturvariski, mutta nyt sen näkeminen konkreettisesti käytännössä teki siitä paljon todellisemman. 
+Harjoitus myös osoitti, että WPA3-salaus ja SAE-autentikointi ovat huomattavasti turvallisempia kuin vanhemmat protokollat. 
+
+### Lähteet: 
 
 
 
