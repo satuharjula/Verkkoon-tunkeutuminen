@@ -77,6 +77,8 @@ Harjoitus myös osoitti, että WPA3-salaus ja SAE-autentikointi ovat huomattavas
 
 ### Lähteet: 
 
+WiFi Challenge Lab. URL: https://lab.wifichallenge.com/. Katsottu: 29.4.2026.
+
 
 
 
