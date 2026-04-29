@@ -1,5 +1,7 @@
-## 
+# h6 - Wifi
 
+
+## wifi challenge lab 2.1 haasteet 1-5
 
 ### 01. What is the channel that the wifi-global Access Point (AP) is currently using?
 
@@ -46,14 +48,13 @@ Tämän jälkeen komennolla grep "78:C1:A7:BF:72:46" scan-01.csv , jolloin tulok
 ### 04. What is the ESSID of the hidden AP (mac F0:9F:C2:6A:88:26)?
 
 Komennoilla:
-
 cat ~/rockyou-top100000.txt | awk '{print "wifi-" $1}' > ~/wifi-rockyou.txt  
 iwconfig wlan0mon channel 11  
 mdk4 wlan0mon p -t F0:9F:C2:6A:88:26 -f ~/wifi-rockyou.txt  
 
 <img width="871" height="233" alt="image" src="https://github.com/user-attachments/assets/b33503e3-5de4-4b44-9e93-f775219cf777" />
 
-Piilotetun AP:n ESSID on: wifi-free
+Piilotetun AP:n ESSID on: wifi-free  
 
 ### 05. What is the flag in the hidden AP router behind default credentials?
 
@@ -62,12 +63,11 @@ Komennolla nano ~/wifi/free.conf loin free.conf -tiedoston.
 <img width="189" height="134" alt="image" src="https://github.com/user-attachments/assets/6553d87c-e1be-4ca6-83cf-1e5191c6f4c3" />
 
 Yhdistin verkkoon komennolla wpa_supplicant -Dnl80211 -iwlan2 -c ~/wifi/free.conf  
-
 Avasin toisen terminaalin, jossa ajoin root:ina:  
 sudo su  
 dhclient wlan2 -v  
 
-Avasin selaimessa 192.168.16.1 ja kirjauduin sisälle käyttäjänä admin ja salasanalla admin, jolloin löysin lipun.
+Avasin selaimessa 192.168.16.1 ja kirjauduin sisälle käyttäjänä admin ja salasanalla admin, jolloin löysin lipun.  
 
 <img width="694" height="308" alt="image" src="https://github.com/user-attachments/assets/bcd4158a-d644-4a19-8ad7-fd87997414d9" />
 
@@ -77,8 +77,8 @@ Harjoituksessa opin Wi-Fi-verkkojen skannausta ja analysointia. Yllättävintä 
 
 ### Miten suhtautumiseni WLAN:in turvallisuuteen muuttui?
 
-Olen tiedostanut oletussalasanojen olevan tietoturvariski, mutta nyt sen näkeminen konkreettisesti käytännössä teki siitä paljon todellisemman. 
-Harjoitus myös osoitti, että WPA3-salaus ja SAE-autentikointi ovat huomattavasti turvallisempia kuin vanhemmat protokollat. 
+Olen tiedostanut oletussalasanojen olevan tietoturvariski, mutta nyt sen näkeminen konkreettisesti käytännössä teki siitä paljon todellisemman.  
+Harjoitus myös osoitti, että WPA3-salaus ja SAE-autentikointi ovat huomattavasti turvallisempia kuin vanhemmat protokollat.  
 
 ### Lähteet: 
 
