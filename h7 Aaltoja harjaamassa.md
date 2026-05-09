@@ -1,6 +1,25 @@
 ### h7
 
-##
+## Tiivistelmät
+
+Universal Radio Hacker SDR Tutorial on 433 MHz radio plugs
+
+- Spectrum Analyzerilla tarkistetaan, että käytetty taajuus on oikea.  
+- Lähetys voidaan tallentaa valitulla taajuudella.  
+- URH:lla voidaan tarkistaa, että vastaanotetut bitit on oikein.
+- Signaalia voidaan näyttää bittimuodossa, heksadesimaalina tai ASCII-muodossa. (Hubacek 2019)
+
+Decode 433.92 MHz weather station data
+
+- 433 MHz taajuudella toimivia laitteita voidaan dekoodata rtl_433-ohjelmalla.  
+- rtl_433 näyttää hyödyllisiä tietoja laitteista ja niiden lähettämistä signaaleista.  
+- URH-ohjelmalla voidaan tallentaa ja analysoida signaaleja tarkemmin.  
+- Tallennettuja signaaleja voidaan tarkastella raakabitteinä. (Cornelius 2022)
+
+
+## Lähteet ja läppä  
+
+Tehty.
 
 ## rtl_433
 
@@ -26,12 +45,11 @@ Analysoin tiedoston komennolla rtl_433 -r Converted_433.92M_2000k.cs8
 
 Sama tunniste (ID) 8785315 esiintyi kaikissa. 
 
+Channel: 3  
 
+Model: Nexa-Security, KlikAanKlikUit-Switch ja Proove-Security  
 
-Channel: 3
-
-
-Model: Nexa-Security, KlikAanKlikUit-Switch ja Proove-Security
+Command: Off. Unit: 3.  
 
 
 ## Too compex 16?  
@@ -60,6 +78,8 @@ rtl_433 -r Recorded_433.92M_2000k.cs8
 
 <img width="633" height="80" alt="image" src="https://github.com/user-attachments/assets/5926cb35-06ea-4c3b-ac5f-d4cd327bc669" />  
 
+Tiedosto näyttää samalta kuin aikaisemmassa tehtävässä.  
+
 ## Ultimate
 
 Asensin URH:n Ultimate Radio Hacker komennoilla:  
@@ -77,17 +97,10 @@ Asennuksen jälkeen ja tiedoston lataamisen jälkeen suljin terminaalin ja avasi
 
 Avasin 1-on-on-on-HackRF-20250412_113805-433_912MHz-2MSps-2MHz.complex16s -tiedoston käyttöliittymässä.  
 
-
-
-
-
 ## Yleiskuva
 
 
 <img width="1481" height="621" alt="image" src="https://github.com/user-attachments/assets/9545c75b-11ca-49e0-915f-f6eb28a7d341" />
-
-
-Tiedosto:  
 
 Pituus: 5.49 s
 Taajuus: 433.912 MHz  
@@ -111,5 +124,7 @@ Modulaatio: ASK
 
 
 Cornelius. 4.1.2022. Decode 433.92 MHz weather station data. One transistor. Luettavissa: https://www.onetransistor.eu/2022/01/decode-433mhz-ask-signal.html. Luettu: 8.5.2026.
+
+Hubacek. 2019. Universal Radio Hacker SDR Tutorial on 433 MHz radio plugs. Katsottavissa: https://youtu.be/sbqMqb6FVMY?t=199. Katsottu: 9.5.2026.
 
 Tero Karvinen 2026. h7. Aaltoja harjaamassa. Luettavissa: https://terokarvinen.com/verkkoon-tunkeutuminen-ja-tiedustelu/. Luettu: 9.5.2026.
