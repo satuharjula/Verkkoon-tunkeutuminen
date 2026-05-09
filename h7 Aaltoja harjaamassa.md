@@ -60,6 +60,43 @@ rtl_433 -r Recorded_433.92M_2000k.cs8
 
 <img width="633" height="80" alt="image" src="https://github.com/user-attachments/assets/5926cb35-06ea-4c3b-ac5f-d4cd327bc669" />  
 
+## Ultimate
+
+Asensin URH:n Ultimate Radio Hacker komennoilla:  
+
+sudo apt-get update  
+sudo apt-get -y install pipx  
+pipx install urh  
+pipx ensurepath  (Tero Karvinen 2026)
+
+<img width="647" height="332" alt="image" src="https://github.com/user-attachments/assets/e0039bf1-b53c-482a-8fa1-5b3e2bfaa275" />  
+
+Latasin 1-on-on-on-HackRF-20250412_113805-433_912MHz-2MSps-2MHz.complex16s -tiedoston koneelleni.  
+
+Asennuksen jälkeen ja tiedoston lataamisen jälkeen suljin terminaalin ja avasin sen uudestaan. Tämän jälkeen syötin komennon urh ja URH graafinen käyttöliittymä avautui.  
+
+Avasin 1-on-on-on-HackRF-20250412_113805-433_912MHz-2MSps-2MHz.complex16s -tiedoston käyttöliittymässä.  
+
+
+
+## Yleiskuva
+
+Näyte:
+
+Pituus:  
+Taajuus:  
+Milloin nauhoittu:  
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -82,3 +119,5 @@ rtl_433 -r Recorded_433.92M_2000k.cs8
 
 
 Cornelius. 4.1.2022. Decode 433.92 MHz weather station data. One transistor. Luettavissa: https://www.onetransistor.eu/2022/01/decode-433mhz-ask-signal.html. Luettu: 8.5.2026.
+
+Tero Karvinen 2026. h7. Aaltoja harjaamassa. Luettavissa: https://terokarvinen.com/verkkoon-tunkeutuminen-ja-tiedustelu/. Luettu: 9.5.2026.
