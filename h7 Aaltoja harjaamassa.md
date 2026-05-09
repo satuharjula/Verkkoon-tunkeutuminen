@@ -104,35 +104,7 @@ Samples/Symbol: 500
 Bits/Symbol: 1  
 Modulaatio: ASK  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+1 bitti 250 mikrosekuntia. Erittäin lyhyt aika esim. verrattuna ihmisen havainnointikykyyn.  
 
 
 ## Lähteet:
