@@ -8,7 +8,7 @@ rtl_433 asennus:
 
 Asensin rtl_433 komennolla sudo apt install rtl-433 
 
-Testasin rtl_433 toimivuutta komennolla rtl_433 
+Testasin rtl_433 toimivuutta komennolla rtl_433 (Tero Karvinen 2026)
 
 <img width="586" height="123" alt="image" src="https://github.com/user-attachments/assets/e05ed25a-fbb5-471e-aae8-5fd16a01ff07" />
 
@@ -83,11 +83,29 @@ Avasin 1-on-on-on-HackRF-20250412_113805-433_912MHz-2MSps-2MHz.complex16s -tiedo
 
 ## Yleiskuva
 
-Näyte:
 
-Pituus:  
-Taajuus:  
-Milloin nauhoittu:  
+<img width="1481" height="621" alt="image" src="https://github.com/user-attachments/assets/9545c75b-11ca-49e0-915f-f6eb28a7d341" />
+
+
+Tiedosto:  
+
+Pituus: 5.49 s
+Taajuus: 433.912 MHz  
+Milloin nauhoitettu: 12.4.2025 klo: 11:38:05  
+Taajuudesta näkee kolme kohtaa, jolloin signaalia on lähetetty.  
+
+## Bittistä
+
+Tarkastelin
+
+<img width="920" height="597" alt="image" src="https://github.com/user-attachments/assets/6c7df555-0001-40e9-90b3-ba0c1fd9723b" />  
+
+Samples/Symbol: 500  
+Bits/Symbol: 1  
+Modulaatio: ASK  
+
+
+
 
 
 
