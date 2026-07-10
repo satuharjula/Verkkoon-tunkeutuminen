@@ -116,9 +116,13 @@ ACK: My PC sends a packet back from port 43008 to port 443, after which the TCP 
 ## Sources:  
 
 Cloudflare 2026. What is SNI (Server Name Indication)? URL: https://www.cloudflare.com/learning/ssl/what-is-sni/. Accessed: 28.3.2026.  
+
 MAC Address Lookup. URL: https://maclookup.app/search/result?mac=5254.00. Accessed: 28.3.2026.  
-Karvinen, T. 28.3.2025. Verkkoliitäntöjen nimet Linuxissa. URL: https://terokarvinen.com/network-interface-linux/. Accessed: 28.3.2026.  
+
+Karvinen, T. 28.3.2025. Verkkoliitäntöjen nimet Linuxissa. URL: https://terokarvinen.com/network-interface-linux/. Accessed: 28.3.2026. 
+
 Karvinen, T. 28.3.2025. Wireshark - Aloittaminen. URL: https://terokarvinen.com/wireshark-getting-started/. Accessed: 28.3.2026.  
+
 
 
 
