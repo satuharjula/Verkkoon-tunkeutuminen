@@ -77,8 +77,11 @@ You can identify a port scan, for example, by searching the log for the text "nm
 ## Wire sharking
 
 I opened Wireshark and selected lo (loopback), then started the capture by pressing start. At the same time, I ran the command sudo nmap -A -p 80 127.0.0.1, after which I stopped the capture in Wireshark.  
+
 I searched for packets in Wireshark using the filter frame contains "nmap".  
+
 A large number of different HTTP requests are sent to the same target in a short period of time.  
+
 Among the packets, various HTTP requests were visible, such as GET, POST, OPTIONS, and PROPFIND, as well as requests to unusual paths, for example /nmaplowercheck ja /robots.txt.  
 
 <img width="1231" height="247" alt="image" src="https://github.com/user-attachments/assets/eb72e4ea-ec7d-414c-8702-d25c14dd4cae" />
