@@ -1,103 +1,104 @@
-# h1 Sniff
+# h1 Sniff  
 
-## Tiivistelmä
+## Summary  
 
-### Wireshark - Aloittaminen
+### Wireshark - Getting Started  
 
--Wireshark on verkon kaappaamiseen sekä analysointiin käytettävä työkalu.
+-Wireshark is a tool used for capturing and analyzing network traffic.  
 
--Kaappaus aloitetaan valitsemalla haluttu verkkoliitäntä ja painamalla Start.
+-A capture is started by selecting the desired network interface and pressing Start.  
 
--Tilastoista näkee yleiskuvan liikenteestä. Esimerkiksi protokollat ja laitteet.
+-The statistics provide an overview of the traffic, such as protocols and devices.  
 
--Suodattimilla voi rajata liikennettä. Esimerkiksi dns, http ja tls. (Karvinen 28.3.2025)
+-Filters can be used to narrow down the traffic, for example dns, http, and tls. (Karvinen 28.3.2025)  
 
-### Verkkoliitäntöjen nimet Linuxissa
+### Network Interface Names in Linux
 
-Verkkoliitännät nimetään Linuxissa systemd:n mukaan. Esimerkiksi enp1s0 ja wlp4s0.
+Network interfaces in Linux are named according to systemd. For example, enp1s0 and wlp4s0.  
 
-  Tyypit:
-  - en = langallinen ethernet
-  - lo = loopback (localhost)
-  - wl = langaton (WiFi)
+  Types:  
+  - en = wired ethernet  
+  - lo = loopback (localhost)  
+  - wl = wireless (WiFi)  
   
-Verkkoliitännän voi tarkistaa komennolla ip a. (Karvinen 28.3.2025)
+You can check the network interface using the command ip a. (Karvinen 28.3.2025)  
 
 
-## Kali Linuxin asennus
+## Installing Kali Linux
 
-Aloitin tehtävän asentamalla Kali Linuxin VirtualBox:iin. Wireshark oli valmiina Kali:ssa, joten sitä ei tarvinut erikseen asentaa tehtävää varten.
+I started the task by installing Kali Linux on VirtualBox. Wireshark was already available in Kali, so it didn't need to be installed separately for this task.  
 
-## Internet-yhteyden katkaisu ja palautus 
+## Disconnecting and Restoring the Internet Connection  
 
-Yhteys päällä
+Connection on  
 
 <img width="201" height="141" alt="image" src="https://github.com/user-attachments/assets/6a67c02a-c7b3-4adc-a825-4ce22871ade6" />
 
-Yhteys pois päältä
+Connection off  
 
 <img width="438" height="175" alt="image" src="https://github.com/user-attachments/assets/e9889cc0-0e02-48dd-9ab9-cdc22c3adbe6" />
 
-## TCP/IP-malli
+## TCP/IP Model
 
-Neljä kerrosta yhdestä sieppaamastani paketista:
+Four layers from a packet I captured:  
 
-### Linkkikerros (Link Layer)
+### Link Layer
 
-Ethernet II sisältää Source MAC (lähettäjä) ja Destination MAC (vastaanottaja), joiden avulla paketti siirtyy lähettäjältä vastaanottajalle.
+Ethernet II contains the Source MAC (sender) and Destination MAC (receiver), which are used to move the packet from the sender to the receiver.  
 
 <img width="645" height="59" alt="image" src="https://github.com/user-attachments/assets/8aabaa3c-811d-4b0f-9d47-734bbc94ffa4" />
 
-### Internet-kerros (Internet Layer)
+### Internet Layer
 
-IPv4 sisältää IP-osoitteet Source IP (lähettäjä) 10.0.2.15 ja Destination IP (vastaanottaja) 142.251.150.119, joiden avulla paketti reititetään oikeaan kohteeseen.
+IPv4 contains the IP addresses Source IP (sender) 10.0.2.15 and Destination IP (receiver) 142.251.150.119, which are used to route the packet to the correct destination.  
 
 <img width="527" height="207" alt="image" src="https://github.com/user-attachments/assets/abb8b5c1-3f11-4ba7-874f-b0ee3f661dbd" />
 
-### Kuljetuskerros (Transport Layer)
+### Transport Layer
 
-TCP:n tehtävä muodostaa yhteys ja luotettava tiedonsiirto porttien avulla.
-Koneeni lähdeportti 54072 ja palvelimen kohdeportti 443 HTTPS.
+TCP's task is to establish a connection and provide reliable data transfer using ports.  
+
+My machine's source port is 54072, and the server's destination port is 443 (HTTPS).  
 
 <img width="640" height="241" alt="image" src="https://github.com/user-attachments/assets/8acdcae8-3de7-44da-8239-278546e151b7" />
 
-### Sovelluskerros (Application Layer)
+### Application Layer
 
-TLS:n tehtävä suojata yhteys salauksella.
+TLS's task is to secure the connection with encryption.  
 
 <img width="470" height="79" alt="image" src="https://github.com/user-attachments/assets/c8a86ebb-3405-4d97-b39b-a596b15e5d40" />
 
-## Kaappauksen kuvailu
-Avaa surfing-secure.pcap. Tutustu siihen pintapuolisesti ja kuvaile, millainen kaappaus on kyseessä.
+## Capture Description
+"Open surfing-secure.pcap. Take a quick look at it and describe what kind of capture this is."  
 
-- Paketteja 283.
-- Kaappauksen kesto 28.3.2025 klo 11:28:09-11:28:16, eli noin 7 sekunin ajan.
-- Laitteita kaksi kappaletta osoitteilla 192.168.122.7 ja 192.168.122.1.
-- Protokollat: DNS, TCP, QUIC ja ARP.
+- 283 packets.  
+- Capture duration 28.3.2025, 11:28:09-11:28:16, so approximately 7 seconds.  
+- Two devices, with addresses 192.168.122.7 and 192.168.122.1.  
+- Protocols: DNS, TCP, QUIC, and ARP.  
 
-## Verkkokortin merkki
+## Network Card Manufacturer  
 
-Syötin MAC-osoitteen MAC Address Lookup:iin, mutta en saanut varmaa tulosta. Lähde-MAC-osoite 52:54:00:2f:e1:e5 ensimmäiset kolme tavua viittaa locally administered -osoitteeseen, eli osoite ei todennäköisesti ole valmistajan antama. (MAC Address Lookup)
+I entered the MAC address into MAC Address Lookup, but did not get a definitive result. The first three bytes of the source MAC address 52:54:00:2f:e1:e5 indicate a locally administered address, meaning the address is most likely not manufacturer-assigned. (MAC Address Lookup)  
   
 <img width="646" height="35" alt="image" src="https://github.com/user-attachments/assets/8654976f-f4d3-4acc-8b03-b090bb898c6c" />
 
 
-## Käyttäjän käyttämät web-palvelimet
+## Web Servers Used by the User
 
-SNI, eli Server Name Indication kertoo, että käyttäjä on mennyt osoitteeseen terokarvinen.com. Vaikka liikenne on salattua SNI näyttää palvelimen nimen. (Cloudflare 2026)
+SNI, or Server Name Indication, shows that the user visited terokarvinen.com. Even though the traffic is encrypted, the SNI reveals the server name. (Cloudflare 2026)  
 
 <img width="644" height="14" alt="image" src="https://github.com/user-attachments/assets/3dc1775c-565b-45da-a909-b7bc1c0051d1"/>
 
 
-## Oman liikenteen kaappaaminen
+## Capturing My Own Traffic  
 
-Kaappasin pienen määrän omaa liikennettäni, kun koneeni yhdisti HTTPS-yhteyden Googlen palvelimeen. 
+I captured a small amount of my own traffic while my machine established an HTTPS connection to a Google server.  
 
-### TCP 3-Way Handshake 
+### TCP 3-Way Handshake  
 
-SYN: Koneeni 10.0.2.15 lähdeportista 43008 lähettää palvelimelle 142.251.152.119 kohdeporttiin 443 paketin käyttäen TCP-protokollaa.
-SYN, ACK: Palvelin vastaa paketilla portista 443 porttiin 43008, eli hyväksyy yhteyspyynnön.
-ACK: Koneeni lähettää takaisin portista 43008 porttiin 443, jonka jälkeen TCP-yhteys on muodostettu.
+SYN: 10.0.2.15 sends a packet from source port 43008 to the server 142.251.152.119 at destination port 443, using the TCP protocol.  
+SYN, ACK: The server responds with a packet from port 443 to port 43008, meaning it accepts the connection request.  
+ACK: My PC sends a packet back from port 43008 to port 443, after which the TCP connection is established.  
 
 <img width="627" height="35" alt="image" src="https://github.com/user-attachments/assets/4d74f740-93f0-4dcb-9808-0151dce82909" />
 
@@ -112,12 +113,12 @@ ACK: Koneeni lähettää takaisin portista 43008 porttiin 443, jonka jälkeen TC
 
 
 
-## Lähteet
+## Sources:  
 
-Cloudflare 2026. What is SNI (Server Name Indication)? Luettavissa: https://www.cloudflare.com/learning/ssl/what-is-sni/. Luettu: 28.3.2026.
-MAC Address Lookup. Luettavissa: https://maclookup.app/search/result?mac=5254.00. Luettu: 28.3.2026.
-Karvinen, T. 28.3.2025. Verkkoliitäntöjen nimet Linuxissa. Luettavissa: https://terokarvinen.com/network-interface-linux/. Luettu: 28.3.2026.
-Karvinen, T. 28.3.2025. Wireshark - Aloittaminen. Luettavissa: https://terokarvinen.com/wireshark-getting-started/. Luettu: 28.3.2026.
+Cloudflare 2026. What is SNI (Server Name Indication)? URL: https://www.cloudflare.com/learning/ssl/what-is-sni/. Accessed: 28.3.2026.
+MAC Address Lookup. URL: https://maclookup.app/search/result?mac=5254.00. Accessed: 28.3.2026.
+Karvinen, T. 28.3.2025. Verkkoliitäntöjen nimet Linuxissa. URL: https://terokarvinen.com/network-interface-linux/. Accessed: 28.3.2026.
+Karvinen, T. 28.3.2025. Wireshark - Aloittaminen. URL: https://terokarvinen.com/wireshark-getting-started/. Accessed: 28.3.2026.
 
 
 
