@@ -57,7 +57,7 @@ Apache httpd 2.4.66 (Debian) indicates the Apache web server and its version.
 In addition to this, nmap identified the operating system and its version, as well as the fact that the target is the local machine.  
 
 
-## Skriptit
+## Scripts
 
 Automatically enabled scripts:  
 
