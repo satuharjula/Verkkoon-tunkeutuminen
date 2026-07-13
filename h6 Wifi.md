@@ -1,7 +1,7 @@
 # h6 - Wifi
 
 
-## Wifi challenge lab 2.1 haasteet 1-5
+## WiFi Challenge Lab 2.1, challenges 1-5
 
 ### 01. What is the channel that the wifi-global Access Point (AP) is currently using?
 
@@ -65,18 +65,18 @@ I opened 192.168.16.1 in the browser and logged in as user admin with password a
 
 <img width="694" height="308" alt="image" src="https://github.com/user-attachments/assets/bcd4158a-d644-4a19-8ad7-fd87997414d9" />
 
-### Mitä opin?
+### What did I learn?
 
-Harjoituksessa opin Wi-Fi-verkkojen skannausta ja analysointia. Yllättävintä oli, kuinka helposti verkkojen tietoja voidaan kerätä. Ainoastaan airodump-ng-komennolla näkee kaikki lähialueen verkot, niiden kanavat ja yhdistyneet laitteet.  
+In this exercise, I learned about scanning and analyzing Wi-Fi networks. What was most surprising was how easily network information can be gathered. With just the airodump-ng command, you can see all nearby networks, their channels, and connected devices.  
 
-### Miten suhtautumiseni WLAN:in turvallisuuteen muuttui?
+### How did my attitude toward WLAN security change?
 
-Olen tiedostanut oletussalasanojen olevan tietoturvariski, mutta nyt sen näkeminen konkreettisesti käytännössä teki siitä paljon todellisemman.  
+I was already aware that default passwords pose a security risk, but seeing it demonstrated concretely in practice made it feel much more real.  
 
 
-### Lähteet: 
+### Sources: 
 
-WiFi Challenge Lab. URL: https://lab.wifichallenge.com/. Katsottu: 29.4.2026.
+WiFi Challenge Lab. URL: https://lab.wifichallenge.com/. Accessed: 29 April 2026.
 
 
 
