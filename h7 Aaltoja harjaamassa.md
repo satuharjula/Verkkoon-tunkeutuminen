@@ -1,72 +1,67 @@
 ### h7
 
-## Tiivistelmät
+## Summary
 
 Universal Radio Hacker SDR Tutorial on 433 MHz radio plugs
 
-- Spectrum Analyzerilla tarkistetaan, että käytetty taajuus on oikea.  
-- Lähetys voidaan tallentaa valitulla taajuudella.  
-- URH:lla voidaan tarkistaa, että vastaanotetut bitit on oikein.
-- Signaalia voidaan näyttää bittimuodossa, heksadesimaalina tai ASCII-muodossa. (Hubacek 2019)
+- A Spectrum Analyzer is used to verify that the correct frequency is being used. 
+- The transmission can be recorded on the selected frequency.
+- URH can be used to verify that the received bits are correct.
+- The signal can be displayed in bit form, hexadecimal, or ASCII format. (Hubacek 2019)
 
 Decode 433.92 MHz weather station data
 
-- 433 MHz taajuudella toimivia laitteita voidaan dekoodata rtl_433-ohjelmalla.  
-- rtl_433 näyttää hyödyllisiä tietoja laitteista ja niiden lähettämistä signaaleista.  
-- URH-ohjelmalla voidaan tallentaa ja analysoida signaaleja tarkemmin.  
-- Tallennettuja signaaleja voidaan tarkastella raakabitteinä. (Cornelius 2022)
-
-
-## Lähteet ja läppä  
-
-Tehty.
+- Devices operating on the 433 MHz frequency can be decoded using the rtl_433 program. 
+- rtl_433 displays useful information about devices and the signals they transmit. 
+- The URH program can be used to record and analyze signals in more detail.
+- Recorded signals can be examined as raw bits. (Cornelius 2022)
 
 ## rtl_433
 
-rtl_433 asennus: 
+rtl_433 installation: 
 
-Asensin rtl_433 komennolla sudo apt install rtl-433 
+I installed rtl_433 with the command sudo apt install rtl-433
 
-Testasin rtl_433 toimivuutta komennolla rtl_433 (Tero Karvinen 2026)
+I tested that rtl_433 was working with the command rtl_433 (Tero Karvinen 2026)
 
 <img width="586" height="123" alt="image" src="https://github.com/user-attachments/assets/e05ed25a-fbb5-471e-aae8-5fd16a01ff07" />
 
-## Automaattinen analyysi
+## Automatic analysis
 
-Latasin näytteen Converted_433.92M_2000k.cs8 virtuaalikoneelleni. 
+I downloaded the sample Converted_433.92M_2000k.cs8 to my virtual machine.
 
-Siirryin hakemistoon komennolla cd ~/Downloads ja etsin näytteen komennolla ls. 
+I moved into the directory with the command cd ~/Downloads and located the sample with the command ls.
 
-Analysoin tiedoston komennolla rtl_433 -r Converted_433.92M_2000k.cs8 
+I analyzed the file with the command rtl_433 -r Converted_433.92M_2000k.cs8.
 
 <img width="649" height="820" alt="image" src="https://github.com/user-attachments/assets/4a249e92-0c68-4eea-b9a8-e08cc9056bbb" />
 
 <img width="637" height="244" alt="image" src="https://github.com/user-attachments/assets/99d9da2a-7039-4158-bac3-9824bcf0e0f1" />
 
-Sama tunniste (ID) 8785315 esiintyi kaikissa. 
+The same identifier (ID) 8785315 appeared in all of them.
 
 Channel: 3  
 
-Model: Nexa-Security, KlikAanKlikUit-Switch ja Proove-Security  
+Model: Nexa-Security, KlikAanKlikUit-Switch, and Proove-Security
 
 Command: Off. Unit: 3.  
 
 
 ## Too compex 16?  
 
-Latasin tiedoston Recorded-HackRF-20250411_183354-433_92MHz-2MSps-2MHz.complex16s  kansioon /Downloads  
+I downloaded the file Recorded-HackRF-20250411_183354-433_92MHz-2MSps-2MHz.complex16s to the /Downloads folder.
 
-Siirryin kansioon /Downloads  
+I moved into the /Downloads folder.
 
-Komennoilla:  
+With the commands:  
 cd ~/Downloads  
 ls  
 
-Kopioin sen rtl_433-nimelle komenolla:  
+I copied it under the name rtl_433 with the command:
 
 cp Recorded-HackRF-20250411_183354-433_92MHz-2MSps-2MHz.complex16s Recorded_433.92M_2000k.cs8  
 
-Analysoin tiedostoa komennolla:  
+I analyzed the file with the command:
 
 rtl_433 -r Recorded_433.92M_2000k.cs8  
 
@@ -78,11 +73,11 @@ rtl_433 -r Recorded_433.92M_2000k.cs8
 
 <img width="633" height="80" alt="image" src="https://github.com/user-attachments/assets/5926cb35-06ea-4c3b-ac5f-d4cd327bc669" />  
 
-Tiedosto näyttää samalta kuin aikaisemmassa tehtävässä.  
+The file looks the same as in the previous task.
 
 ## Ultimate
 
-Asensin URH:n Ultimate Radio Hacker komennoilla:  
+I installed URH, Universal Radio Hacker, with the commands:
 
 sudo apt-get update  
 sudo apt-get -y install pipx  
@@ -91,40 +86,40 @@ pipx ensurepath  (Tero Karvinen 2026)
 
 <img width="647" height="332" alt="image" src="https://github.com/user-attachments/assets/e0039bf1-b53c-482a-8fa1-5b3e2bfaa275" />  
 
-Latasin 1-on-on-on-HackRF-20250412_113805-433_912MHz-2MSps-2MHz.complex16s -tiedoston koneelleni.  
+I downloaded the file 1-on-on-on-HackRF-20250412_113805-433_912MHz-2MSps-2MHz.complex16s to my computer.
 
-Asennuksen jälkeen ja tiedoston lataamisen jälkeen suljin terminaalin ja avasin sen uudestaan. Tämän jälkeen syötin komennon urh ja URH graafinen käyttöliittymä avautui.  
+After the installation and downloading the file, I closed the terminal and reopened it. Then I entered the command urh and the URH graphical interface opened.
 
-Avasin 1-on-on-on-HackRF-20250412_113805-433_912MHz-2MSps-2MHz.complex16s -tiedoston käyttöliittymässä.  
+I opened the file 1-on-on-on-HackRF-20250412_113805-433_912MHz-2MSps-2MHz.complex16s in the interface.
 
-## Yleiskuva
+## Overview
 
 
 <img width="1481" height="621" alt="image" src="https://github.com/user-attachments/assets/9545c75b-11ca-49e0-915f-f6eb28a7d341" />
 
-Pituus: 5.49 s
-Taajuus: 433.912 MHz  
-Milloin nauhoitettu: 12.4.2025 klo: 11:38:05  
-Taajuudesta näkee kolme kohtaa, jolloin signaalia on lähetetty.  
+Length: 5.49 s
+Frequency: 433.912 MHz  
+When recorded: 12.4.2025 klo: 11:38:05  
+Three points can be seen in the frequency where a signal was transmitted.
 
-## Bittistä
+## BitS
 
-Tarkastelin
+I examined
 
 <img width="920" height="597" alt="image" src="https://github.com/user-attachments/assets/6c7df555-0001-40e9-90b3-ba0c1fd9723b" />  
 
 Samples/Symbol: 500  
 Bits/Symbol: 1  
-Modulaatio: ASK  
+Modulation: ASK  
 
-1 bitti 250 mikrosekuntia. Erittäin lyhyt aika esim. verrattuna ihmisen havainnointikykyyn.  
-
-
-## Lähteet:
+1 bit is 250 microseconds. An extremely short time, for example compared to human perception ability. 
 
 
-Cornelius. 4.1.2022. Decode 433.92 MHz weather station data. One transistor. Luettavissa: https://www.onetransistor.eu/2022/01/decode-433mhz-ask-signal.html. Luettu: 8.5.2026.
+## Sources:
 
-Hubacek. 2019. Universal Radio Hacker SDR Tutorial on 433 MHz radio plugs. Katsottavissa: https://youtu.be/sbqMqb6FVMY?t=199. Katsottu: 9.5.2026.
 
-Tero Karvinen 2026. h7. Aaltoja harjaamassa. Luettavissa: https://terokarvinen.com/verkkoon-tunkeutuminen-ja-tiedustelu/. Luettu: 9.5.2026.
+Cornelius. 4 January 2022. Decode 433.92 MHz weather station data. One transistor. URL: https://www.onetransistor.eu/2022/01/decode-433mhz-ask-signal.html. Accessed: 8.5.2026.
+
+Hubacek. 2019. Universal Radio Hacker SDR Tutorial on 433 MHz radio plugs. URL: https://youtu.be/sbqMqb6FVMY?t=199. Accessed: 9 May 2026.
+
+Tero Karvinen 2026. h7. Aaltoja harjaamassa. URL: https://terokarvinen.com/verkkoon-tunkeutuminen-ja-tiedustelu/. Accessed: 9 May 2026.
